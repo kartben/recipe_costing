@@ -7,7 +7,7 @@
       <p class="col-md-3" style="display:inline"><%= ingredient.name %> (<%= ingredient.unit %>)</p>
 		  <%= fields_for "ingredients[]", ingredient do |f| %>
 			  <div class="col-md-4">
-			  <%= f.text_field :price, class: "form-control" %>
+			  <%= f.text_field :inventory, class: "form-control" %>
 				</div>
 			<% end %>
 		</div>
