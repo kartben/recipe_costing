@@ -3,6 +3,8 @@ module VolumeUnitHelper
 	# Determine if unit is of Volume type
 	def volume_unit?(unit)
 		case unit
+			when 'L'  then true
+			when 'mL'    then true
 			when 'fl_oz'  then true
 			when 'cup'    then true
 			when 'pint'   then true
@@ -17,6 +19,8 @@ module VolumeUnitHelper
 	# Converts any volume unit to fluid ounces
 	def convert_to_fl_oz(amount, unit)
 		case unit
+			when 'L' then amount * 33.814
+			when 'mL' then amount * 0.033814
 			when 'gallon' then amount * 128
 			when 'quart'  then amount * 32
 			when 'pint'   then amount * 16

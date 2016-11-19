@@ -16,7 +16,7 @@ class Recipe < ActiveRecord::Base
 
   # Class instance variables
   @categories = %w(sauces stocks salads proteins other).sort
-  @units = %w(portion ea oz lb fl_oz cup pint quart gallon Tbsp tsp)
+  @units = %w(portion ea g kg oz lb fl_oz cup pint quart gallon Tbsp tsp)
 
   class << self
   	attr_accessor :categories, :units

@@ -18,7 +18,7 @@ class Ingredient < ActiveRecord::Base
   # Class instance variables
   @categories = %w(dairy vegetables meats fruits spices other).sort
 
-  @units = %w(oz lb fl_oz cup pint quart gallon Tbsp tsp ea pack head can bunch)
+  @units = %w(g kg L mL Tbsp tsp ea pack head can bunch)
   
   class << self
   	attr_accessor :categories, :units

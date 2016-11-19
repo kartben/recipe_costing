@@ -3,6 +3,8 @@ module WeightUnitHelper
 		case unit
 		  when 'oz' then true
 		  when 'lb' then true
+		  when 'g' then true
+		  when 'kg' then true
 		  else false
 		end
 	end
@@ -10,6 +12,8 @@ module WeightUnitHelper
 	def convert_to_oz(amount, unit)
 		case unit
 			when 'lb'  then amount * 16
+			when 'g'  then amount * 0.035274
+			when 'kg'  then amount * 35.274
 			when 'oz' then amount			
 		end
 	end

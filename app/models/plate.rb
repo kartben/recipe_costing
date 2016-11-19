@@ -14,7 +14,7 @@ class Plate < ActiveRecord::Base
 
   # Class instance variables
   @categories = %w(appetizer entree dessert other)
-  @units = %w(portion ea oz lb fl_oz cup pint quart Tbsp tsp)
+  @units = %w(portion ea g kg L mL Tbsp tsp)
 
   class << self
   	attr_accessor :categories, :units
