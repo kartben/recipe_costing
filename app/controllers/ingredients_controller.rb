@@ -79,7 +79,9 @@ class IngredientsController < ApplicationController
   end
 
   def update_inventory
-
+    @ingredients = Ingredient.update(params[:ingredients].keys, params[:ingredients].values)
+    flash[:success] = "Inventory Updated successfully"
+    render "edit_inventory"
   end
 
 private
