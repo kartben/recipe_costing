@@ -1,5 +1,5 @@
 <section class="col-sm-4 color category color-recipe">
-  <h1 class="page-header">Recipes</h1>
+  <h1 class="page-header">Recettes</h1>
   <% @categories.each do |category| %>
     <a id="<%= category.name %>" href="#"><%= category.name %></a>
   <% end %>
@@ -15,11 +15,11 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Total Yield</th>
-        <th>Category</th>
-        <th>Total Cost</th>
-        <th>Cost per Unit</th>
+        <th>Nom</th>
+        <th>Produit</th>
+        <th>Catégorie</th>
+        <th>Coût total</th>
+        <th>Coût unitaire</th>
         <th></th>
       </tr>
     </thead>
@@ -37,7 +37,7 @@
         <td><%= recipe.recipe_category.name %></td>
         <td><%= number_to_currency recipe.total_cost %></td>
         <td><%= number_to_currency recipe.cost_per_unit %></td>
-        <td><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '❌', recipe, method: :delete, data: { confirm: 'Êtes-vous sûr(e) ?' } %></td>
       </tr>
     <% end %>
   </table>
