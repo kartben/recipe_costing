@@ -117,6 +117,7 @@ ActiveRecord::Schema.define(:version => 20140530213719) do
     t.datetime "updated_at",         :null => false
     t.decimal  "yield"
     t.string   "yield_unit"
+    t.text   "instructions"
     t.integer  "user_id"
     t.integer  "recipe_category_id"
   end

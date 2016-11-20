@@ -1,0 +1,17 @@
+<div class="panel panel-success" id="recipes_instructions_form">
+	<div class="panel-heading">
+    <h3 class="panel-title">Instructions</h3>
+  </div>
+  <div class="panel-body" id="recipe_instructions_form">
+  <%= form_for @recipe do |f| %>
+      <%= best_in_place @recipe, :instructions, :as => :textarea %>
+  <% end %>    
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  /* Activating Best In Place */
+  jQuery(".best_in_place").best_in_place();
+});
+</script>

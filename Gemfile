@@ -29,9 +29,14 @@ end
 
 group :test do
 	gem 'capybara', '1.1.2'
+	gem 'test-unit', '~> 3.0'
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 gem 'bcrypt-ruby', '3.0.0'
 
 gem "newrelic_rpm", "~> 3.7.1.188"
+
+gem "best_in_place"

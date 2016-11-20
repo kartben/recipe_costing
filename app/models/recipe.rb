@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-  attr_accessible :name, :yield, :yield_unit, :recipe_category_id
+  attr_accessible :name, :yield, :yield_unit, :recipe_category_id, :instructions
 
   # Validations
   validates :name, presence: true
