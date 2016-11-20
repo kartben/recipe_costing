@@ -30,7 +30,7 @@ class Plate < ActiveRecord::Base
     if self.sales_price
       cost / self.sales_price * 100
     else
-      "0"
+      0
     end
   end
 private

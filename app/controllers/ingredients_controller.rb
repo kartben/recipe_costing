@@ -29,7 +29,7 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = current_user.ingredients.build(params[:ingredient])
 
-    @ingredient.name = params[:ingredient][:name].titleize
+    @ingredient.name = params[:ingredient][:name] #.titleize
 
     if @ingredient.save
       flash[:success] = @ingredient.name + " was successfully added to ingredients."

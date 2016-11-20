@@ -19,7 +19,7 @@
 		<b><%= "Food Cost".upcase %></b>
 	</p>
 
-	<p class="jumbo_text"><%= number_to_percentage @plate.food_cost %></p>
+	<p class="jumbo_text"><%= number_to_percentage @plate.food_cost, :precision => 2 %></p>
 
 	<%= link_to 'Edit', edit_plate_path(@plate), class: "btn btn-default" %> 
 

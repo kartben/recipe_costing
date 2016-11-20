@@ -42,7 +42,7 @@ class RecipesController < ApplicationController
       if @recipe.update_attributes(params[:recipe])
         flash[:success] = @recipe.name + ' Recipe was successfully updated.'
         format.html { redirect_to @recipe }
-        format.json { head :no_content }
+        format.json { respond_with_bip @recipe }
       else
         format.html { render action: "edit" }
         format.json { render json: @recipe.errors, status: :unprocessable_entity }

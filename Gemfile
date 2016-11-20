@@ -37,6 +37,8 @@ gem 'jquery-ui-rails'
 
 gem 'bcrypt-ruby', '3.0.0'
 
-gem "newrelic_rpm", "~> 3.7.1.188"
+gem 'newrelic_rpm'
 
 gem "best_in_place"
+
+gem 'redcarpet'
