@@ -21,6 +21,12 @@
 
 	<p class="jumbo_text"><%= number_to_percentage @plate.food_cost, :precision => 2 %></p>
 
+	<p class="text-muted">
+		<b><%= "Coeff.".upcase %></b>
+	</p>
+
+	<p class="jumbo_text"><%= (100 / @plate.food_cost).round(1) %></p>
+
 	<%= link_to 'Edit', edit_plate_path(@plate), class: "btn btn-default" %> 
 
 </div>
