@@ -4,7 +4,7 @@
   </div>
   <div class="panel-body" id="recipe_instructions_form">
   <%= form_for @recipe do |f| %>
-      <%= best_in_place @recipe, :instructions, :as => :textarea, :html_attrs => { :cols => '110', :rows => '10' }, :skip_blur => true, :ok_button => 'Save', :cancel_button => 'Cancel',:display_with => proc { |v| Redcarpet::Markdown.new(Redcarpet::Render::HTML, :footnotes => true, :autolink => true).render(v).html_safe } %>
+      <%= best_in_place @recipe, :instructions, :as => :textarea, :html_attrs => { :cols => '110', :rows => '10' }, :skip_blur => true, :ok_button => 'Save', :cancel_button => 'Cancel',:display_with => proc { |v| Redcarpet::Markdown.new(Redcarpet::Render::HTML, :footnotes => true, :autolink => true).render(v || '').html_safe } %>
   <% end %>    
   </div>
 </div>
