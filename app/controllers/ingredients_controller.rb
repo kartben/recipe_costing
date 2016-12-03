@@ -17,7 +17,8 @@ class IngredientsController < ApplicationController
 
   def new
     @ingredient = Ingredient.new
-
+    @recipes = []
+    
     if params[:category]
       @ingredient.ingredient_category_id = params[:category]
     end
