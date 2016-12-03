@@ -24,6 +24,7 @@ class IngredientsController < ApplicationController
   end
 
   def edit
+    @recipes = Recipe.joins(:ingredients).where("recipe_ingredients.ingredient_id = ?", @ingredient)
   end
 
   def create
